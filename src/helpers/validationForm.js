@@ -3,7 +3,7 @@ export const validationForm = (form) => {
     let errors = {};
     let regexEmail = /^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$/;
     let regexEmailPosta = /challenge@alkemy.org/;
-    let regexcomentario = /react{5}$/;
+    let regexcomentario = /react/;
 
     if (!form.email.trim()) {
         errors.email = "El email es requerido"
