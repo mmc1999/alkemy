@@ -1,0 +1,59 @@
+.divPrincipal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+}
+.imagenComida {
+    max-width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.divCaracteristicas {
+    margin-top: 10px;
+    background-color: #CD0E50;
+    border-bottom-left-radius:10px ;
+    border-bottom-right-radius:10px ;
+    padding: 5px;
+    height: 100px;
+}
+.titulo, .parrafoCarac {
+    color: white;
+}
+.verMas {
+    color: white;
+    text-decoration: none;
+}
+.divVerClose {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 8px;
+}
+.svgImagen {
+    width: 20px;
+    cursor: pointer;
+    filter: invert(1);
+}
+
+@media all and (min-width:600px) {
+    .divPrincipal {
+        height: 100%;
+        box-sizing: border-box;
+    }
+}
+
+@media all and (min-width:1200px) {
+    .divPrincipal {
+        justify-content: space-between;
+        height: 100%;
+    }
+    .divCaracteristicas {
+        padding: 5px;
+    }
+    .parrafoCarac {
+        font-size: 12px;
+    }
+}

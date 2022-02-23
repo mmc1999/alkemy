@@ -1,0 +1,10 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+  font-family: 'Source Serif 4', sans-serif;
+}
+*, *::after, *::before {
+  box-sizing: inherit;
+  margin: 0px;
+  padding: 0px;
+}

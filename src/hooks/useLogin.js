@@ -1,0 +1,69 @@
+import axios from "axios";
+import react,{ useContext, useState } from "react";
+import UserContext from "../context/UserContext";
+import sweetAlert from "sweetalert";
+import {Navigate} from "react-router-dom";
+
+const initialValue = {
+    email:"",
+    password:""
+}
+
+const useLogin = (validationForm) => {
+    const [loading, setLoading] = useState(false);
+    const [form, setForm] = useState(initialValue);
+    const [errors, setError] = useState({});
+    let {setUsuario} = useContext(UserContext);
+
+    const iniciarSesion = () => {
+        setLoading(true);
+        setTimeout(() => {
+            axios
+            .post('http://challenge-react.alkemy.org/', {
+                email: form.email,
+                password: form.password,
+            })
+            .then((res) => {
+                const token = res.data.token;
+                localStorage.setItem('token', token);
+                setLoading(false);
+                setUsuario(true);
+                <Navigate to="/" />
+            })
+            .catch((err) => {
+                //AGREGAR ALERT SWEET ACA
+                sweetAlert("La API ha fallado", "Vuelva a intentarlo por favor");
+                setLoading(false);
+                console.log(err);
+            });
+        }, 2000);
+          
+        
+      };
+
+    const handleChange = (e) => {    
+        setForm({
+            ...form,
+            [e.target.name]:e.target.value
+        });
+    }
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        handleChange(e);
+        setForm(initialValue);
+        setError(validationForm(form));
+        console.log(Object.values(errors).length)
+        console.log(errors)
+        iniciarSesion();
+    }
+
+    return {
+        form,
+        errors,
+        handleChange,
+        handleSubmit,
+        loading
+    }
+}
+
+export default useLogin

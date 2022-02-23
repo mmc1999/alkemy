@@ -1,0 +1,72 @@
+.divPrincipal {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    /*border: 1px solid black;*/
+    border-radius: 10px;
+    /*padding: 5px;*/
+    position: relative;
+    overflow: hidden;
+}
+.divCaracteristicas {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.imagenComida {
+    max-width: 100%;
+    height: 300px;
+}
+
+.divTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #CD0E50;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    height: 50px;
+}
+.nombreComida {
+    color: white;
+    font-size: 16px;
+}
+/*.divVerClose {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 8px;
+    height: 0px;
+}*/
+.divPrincipal:hover .divVerClose {
+    display: flex;
+    transform: translateY(0%);
+    transition: transform 0.5s ease-in;
+}
+.divVerClose {
+    position: absolute;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    left: 0px;
+    top: 0px;
+    z-index: 0;
+    gap: 10px;
+    transform: translateY(100%);
+    transition: transform 1s ease-in;
+    background-color: rgba(78, 78, 78, 0.6);
+}
+.verMas {
+    cursor: pointer;
+    color: white;
+}
+.imagen {
+    width: 20px;
+    cursor: pointer;
+    filter: invert(1);
+}

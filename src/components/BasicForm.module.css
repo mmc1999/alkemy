@@ -1,0 +1,30 @@
+.divMenues {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+.form {
+    margin-bottom: 40px;
+}
+.input {
+    margin: 0px auto;
+    width: 80%;
+    padding: 10px;
+    border-radius: 20px;
+    border: thin solid gray;
+}
+.h2 {
+    text-align: center;
+    margin: 15px 0px;
+}
+
+@media all and (min-width:600px) {
+    .input {
+        width: 400px;
+    }
+}
+@media all and (min-width:1200px) {
+    .input {
+        width: 600px;
+    }
+}
