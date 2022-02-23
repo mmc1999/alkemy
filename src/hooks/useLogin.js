@@ -14,16 +14,21 @@ export const useLogin = (validationForm) => {
     const [form, setForm] = useState(initialValue);
     const [errors, setError] = useState({});
     let {setUsuario} = useContext(UserContext);
-
+    let url = "http://challenge-react.alkemy.org/";
+    let body = {
+        email: form.email,
+        password: form.password
+    }
     
 
     const iniciarSesion = () => {
         setLoading(true);
+
         setTimeout(() => {
-            axios
-            .post('http://challenge-react.alkemy.org/', {
-                email: form.email,
-                password: form.password,
+            axios({
+                method: 'post',
+                url: url,
+                data: body
             })
             .then((res) => {
                 const token = res.data.token;
