@@ -1,6 +1,6 @@
 import react, { useState } from "react"
 import {Formik} from "formik";
-import {api} from "../helpers/api"
+import {useApi} from "../hooks/useApi"
 import BasicForm from "./BasicForm";
 
 const apiKey = "6cf72b368d5544a5bf961a19b4bfe942";
@@ -21,7 +21,7 @@ export default function Form() {
 
     let {
         datos
-    } = api(url)
+    } = useApi(url)
     
     return(
         <>

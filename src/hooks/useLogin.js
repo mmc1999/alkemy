@@ -1,5 +1,5 @@
 import axios from "axios";
-import react,{ useContext, useState } from "react";
+import { useContext, useState } from "react";
 import UserContext from "../context/UserContext";
 import sweetAlert from "sweetalert";
 import {Navigate} from "react-router-dom";
@@ -9,11 +9,13 @@ const initialValue = {
     password:""
 }
 
-const useLogin = (validationForm) => {
+export const useLogin = (validationForm) => {
     const [loading, setLoading] = useState(false);
     const [form, setForm] = useState(initialValue);
     const [errors, setError] = useState({});
     let {setUsuario} = useContext(UserContext);
+
+    
 
     const iniciarSesion = () => {
         setLoading(true);
@@ -52,8 +54,6 @@ const useLogin = (validationForm) => {
         handleChange(e);
         setForm(initialValue);
         setError(validationForm(form));
-        console.log(Object.values(errors).length)
-        console.log(errors)
         iniciarSesion();
     }
 
@@ -65,5 +65,3 @@ const useLogin = (validationForm) => {
         loading
     }
 }
-
-export default useLogin
