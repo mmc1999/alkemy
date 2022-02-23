@@ -2,7 +2,7 @@ import MenuModule from "./Menu.module.css";
 import Receta from "./Receta";
 import Form from "./Form";
 import SinPlatos from "./SinPlatos";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import MenuContext from "../context/MenuContext";
 
 export default function Menu() {

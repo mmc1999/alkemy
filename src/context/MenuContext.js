@@ -5,7 +5,7 @@ const MenuContext = createContext();
 
 
 const MenuProvider = ({children}) => {
-    let initialValue = Boolean(JSON.parse(localStorage.getItem("menu")))== false
+    let initialValue = Boolean(JSON.parse(localStorage.getItem("menu"))) === false
         ? []
         : JSON.parse(localStorage.getItem("menu"));
     const [menu, setMenu] = useState(initialValue);
@@ -32,7 +32,7 @@ const MenuProvider = ({children}) => {
             }else if(el.vegan && platosVeggie> 2) {
                 alert("No puede agregar un plato mas vegano. Debera eliminar uno de su menu")
             } else {
-                if(menu.find(ele=> ele.id == el.id)) {
+                if(menu.find(ele=> ele.id === el.id)) {
                     alert("No puedes agregar el mismo plato al menu.")
                 } else { //agrega el plato si no es el mismo plato
                     setMenu([...menu, el])
@@ -56,8 +56,8 @@ const MenuProvider = ({children}) => {
     }, [menu]);
 
     const handleClick = (e) => {
-        setMenu(menu.filter(dato => dato.id != e.target.id));
-        let elemento = menu.find(ele=> ele.id == e.target.id);
+        setMenu(menu.filter(dato => dato.id !== e.target.id));
+        let elemento = menu.find(ele=> ele.id === e.target.id);
         setOperacion(true)
         setPromHealthScore(promHealthScore - elemento.healthScore)
         setPrecioTotal(precioTotal - elemento.pricePerServing);
@@ -97,7 +97,7 @@ const MenuProvider = ({children}) => {
             setPromTiempoPreparacion(promTiempoPreparacion => promTiempoPreparacion + el.readyInMinutes);
         });
     }, []);
-    const data = {menu, setMenu, promHealthScore, precioTotal, promTiempoPreparacion, setPrecioTotal, setPromHealthScore, setPromHealthScore, handleClick, handleClick1};
+    const data = {menu, setMenu, promHealthScore, precioTotal, promTiempoPreparacion, handleClick, handleClick1};
 
     return <MenuContext.Provider value={data}>{children}</MenuContext.Provider>
 }
