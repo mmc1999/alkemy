@@ -13,9 +13,9 @@ export default function NuevaReceta({el}) {
         openModal,
         closeModal
     ] = useModal(false);
-    let cadenaCortada = "";
-    const verMas = (cadena) => cadenaCortada = cadena.substr(0, 135) + "...";
-    const title = (cadena) => cadenaCortada = cadena.length < 40 ? cadena : cadena.substr(0, 45) + "...";
+    
+    //const verMas = (cadena) => cadenaCortada = cadena.substr(0, 135) + "...";
+    const title = (cadena) => cadena.length < 40 ? cadena : cadena.substr(0, 45) + "...";
 
 
     return(

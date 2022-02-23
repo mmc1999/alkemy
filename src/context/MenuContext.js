@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import Menu from "../components/Menu";
+
 
 const MenuContext = createContext();
 
@@ -17,7 +17,8 @@ const MenuProvider = ({children}) => {
 
     const handleClick1 = (el) => {
         
-        let confirmar = confirm(`¿Seguro que desea agregar el plato ${el.title}?`);
+        
+        let confirmar = window.confirm(`¿Seguro que desea agregar el plato ${el.title}?`);
         
         if(confirmar && menu.length+1 <= 4) {
             let {platoConCarne, platosVeggie} = contarPlatosVeganoOno(el);
