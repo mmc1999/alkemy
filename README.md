@@ -11,10 +11,8 @@ Lo hice. Actualice la pagina y ahora me sale el siguiente error:\
 No encontre la forma de solucionarlo.
 
 
-### vuelvo a repetir de manera local el sitio funciona bien cumpliendo todos los requisitos. 
+### la unica forma que encontre de que funcione la app en vivo es copiando este token en el localstorage
 
-
-la unica forma que encontre de que funcione la app en vivo es copiendo este token en el localstorage
 \
 **token** : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwiZW1haWwiOiJjaGFsbGVuZ2VAYWxrZW15Lm9yZyIsImlhdCI6MTUxNjIzOTAyMn0.ilhFPrG0y7olRHifbjvcMOlH7q2YwlegT0f4aSbryBE
 
