@@ -56,8 +56,9 @@ const MenuProvider = ({children}) => {
     }, [menu]);
 
     const handleClick = (e) => {
-        setMenu(menu.filter(dato => dato.id !== e.target.id));
-        let elemento = menu.find(ele=> ele.id === e.target.id);
+        setMenu(menu.filter(dato => dato.id != e.target.id));
+        let elemento = menu.find(ele=> ele.id == e.target.id);
+        console.log(menu.find(ele=> ele.id == e.target.id))
         setOperacion(true)
         setPromHealthScore(promHealthScore - elemento.healthScore)
         setPrecioTotal(precioTotal - elemento.pricePerServing);
