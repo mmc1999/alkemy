@@ -18,7 +18,7 @@ export const validationForm = (form) => {
     } else if (!regexcomentario.test(form.password.trim())) {
         errors.password = "La contraseña es incorrecta"
     }
-    console.log(form.password)
+    console.log(errors)
     return errors
 }
 

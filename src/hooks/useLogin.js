@@ -63,11 +63,17 @@ export const useLogin = (validationForm) => {
         iniciarSesion();
     }
 
+    const handleBlur = (e) => {
+        handleChange(e);
+        setError(validationForm(form));
+    }
+
     return {
         form,
         errors,
         handleChange,
         handleSubmit,
-        loading
+        loading,
+        handleBlur
     }
 }

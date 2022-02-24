@@ -17,7 +17,15 @@
     text-align: center;
     margin: 15px 0px;
 }
-
+.mensajeError {
+    color: red;
+    text-align: center;
+}
+.datosVacio {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
 @media all and (min-width:600px) {
     .input {
         width: 400px;

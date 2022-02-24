@@ -16,17 +16,27 @@ export default function BasicForm({loading, handleSubmit, handleChange, values, 
                     onChange={handleChange}
                     className={BasicFormModule.input}
                 />
-                {values.comida && <p>{errors.comida}</p>}
+                {errors.comida && <p className={BasicFormModule.mensajeError}>{errors.comida}</p>}
             </form>
             <div>
                 
-                <div className={BasicFormModule.divMenues}>
+                <div>
                     {
                         loading 
                             ?   <Loader />
-                            : datos.map(el => 
-                                <NuevaReceta key={el.id} el={el}  />
-                            )
+                            : datos.length === 0  
+                                ? <p className={BasicFormModule.datosVacio}>No se encontraron platos con el nombre "{values.comida}"</p> 
+                                : (
+                                    <div className={BasicFormModule.divMenues}>
+                                        {
+                                            datos.map(el => 
+                                                <NuevaReceta key={el.id} el={el}  />
+                                            )
+                                        }
+                                    </div>
+                                ) 
+                                
+                                
                     }
                 </div>
                     

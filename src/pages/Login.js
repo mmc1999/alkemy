@@ -12,7 +12,8 @@ export default function Login() {
         errors,
         handleChange,
         handleSubmit,
-        loading
+        loading,
+        handleBlur
     } = useLogin(validationForm);
     let {usuario} = useContext(UserContext);
     if(usuario) return <Navigate to="/" />
@@ -20,7 +21,7 @@ export default function Login() {
     return(
         <section className={LoginModule.seccionForm}>
             <h1>THE MENU</h1>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className={LoginModule.formulario} >
                 <input 
                     type="email"
                     placeholder="Ingrese su email" 
@@ -28,6 +29,7 @@ export default function Login() {
                     name="email" 
                     className={LoginModule.input}
                     onChange={handleChange}
+                    onBlur={handleBlur}
                 />
                 {errors.email && <p className={`${LoginModule.error} ${LoginModule.errorMail}`}>{errors.email}</p>}
                 <input 
@@ -37,6 +39,7 @@ export default function Login() {
                     name="password" 
                     className={LoginModule.input}
                     onChange={handleChange}
+                    onBlur={handleBlur}
                 />
                 {errors.password && <p className={`${LoginModule.error} ${LoginModule.errorPassword}`}>{errors.password}</p>}
                 {

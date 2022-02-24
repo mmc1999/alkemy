@@ -34,5 +34,19 @@ form {
 }
 .button {
     margin: 10px 0px 0px 0px;
-    background-color: green;
+    background-color: #CD0E50;
+    color: white;
+    font-weight: bold;
+    width: 150px;
+    margin: 0% auto;
+    cursor: pointer;
+}
+
+@media all and (min-width:600px) {
+    .formulario {
+        display: flex;
+        
+        justify-content: center;
+        width: 400px;
+    }
 }
