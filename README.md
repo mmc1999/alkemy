@@ -4,7 +4,7 @@ Toda la app la desarrolle obviamente de manera local. Y cumple con todos los req
 ![imagen](./errorAlkemy.jpeg).\
 Me puse a buscar en internet la forma de solucionarlo y vi que muchos usuarios ponian que habia que agregar la siguiente etiqueta meta en el header de HTML:\
 \
-**meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">** \
+**meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"** 
 
 Lo hice. Actualice la pagina y ahora me sale el siguiente error:\
 ![imagen](./errorPost.jpeg)\
