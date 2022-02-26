@@ -14,7 +14,7 @@ export const useLogin = (validationForm) => {
     const [form, setForm] = useState(initialValue);
     const [errors, setError] = useState({});
     let {setUsuario} = useContext(UserContext);
-    let url = "http://challenge-react.alkemy.org/";
+    let url = "https://node-api-proxy-alkemy.herokuapp.com/";
     let body = {
         email: form.email,
         password: form.password
