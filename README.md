@@ -1,4 +1,4 @@
-# ANTES DE ENTRAR AL LINK DEL SITIO LEER EL SIGUIENTE PARRAFO
+# SI EL LOGIN DA LOS SIGUIENTES ERRORES, LA UNICA SOLUCION QUE ENCONTRE FUE AGREGARLE PERSONALMENTE EL TOKEN. SOLAMENTE HACER ESTO EN CASO DE ERRO AL LOGUEARSE
 
 Toda la app la desarrolle obviamente de manera local. Y cumple con todos los requirimientos y funciona tambien bien. Pero cuando la deploye en netlify y obtuve la url del sitio al intentar hacer el login me da el siguiente error en consola: \
 ![imagen](./errorAlkemy.jpeg).\
