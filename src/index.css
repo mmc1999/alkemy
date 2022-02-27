@@ -8,3 +8,9 @@ html {
   margin: 0px;
   padding: 0px;
 }
+body {
+  background-image: url("./images/fondo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}

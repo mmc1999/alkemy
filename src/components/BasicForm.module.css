@@ -18,7 +18,9 @@
     margin: 15px 0px;
 }
 .mensajeError {
-    color: red;
+    background-color: rgba(255, 154, 154, 0.904);
+    border-radius: 10px;
+    color: white;
     text-align: center;
 }
 .datosVacio {

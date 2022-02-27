@@ -18,6 +18,8 @@ export default function Modal({el, isOpen, closeModal}) {
                     <p className={ModuleModal.p} >Precio del plato: $<b>{el.pricePerServing}</b></p>
                     <p className={ModuleModal.p} >Tiempo de preparacion: <b>{el.readyInMinutes}</b></p>
                     <p className={ModuleModal.p} >healthScore: <b>{el.healthScore}</b></p>
+                    <p className={ModuleModal.p}>Vegano: <b>{el.vegan ? "si" : "no"}</b></p>
+                    <p className={ModuleModal.p}>Vegetariano: <b>{el.vegetarian ? "si" : "no"}</b></p>
                 </div>
             </div>
         </article>

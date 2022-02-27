@@ -1,4 +1,19 @@
 .main {
-    height: 100%;
     padding: 10px;
+}
+@media all and (min-width:600px) {
+    body {
+       display: flex;
+        justify-content: center;
+        align-items: center; 
+    }
+    
+}
+@media all and (min-width:1200px) {
+    body {
+       display: initial;
+        
+        
+    }
+    
 }

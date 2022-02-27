@@ -20,7 +20,6 @@ export default function Login() {
     
     return(
         <section className={LoginModule.seccionForm}>
-            <h1>THE MENU</h1>
             <form onSubmit={handleSubmit} className={LoginModule.formulario} >
                 <input 
                     type="email"

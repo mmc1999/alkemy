@@ -7,7 +7,6 @@ export default function BasicForm({loading, handleSubmit, handleChange, values, 
     return(
         <>
             <form onSubmit={handleSubmit} className={BasicFormModule.form}>
-                <h2 className={BasicFormModule.h2}>Agregar al menu</h2>
                 <input 
                     type="text" 
                     placeholder="Ingrese el menu" 
