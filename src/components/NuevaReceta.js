@@ -23,11 +23,9 @@ export default function NuevaReceta({el}) {
                 <div>
                     <img src={el.image} alt={el.title} className={NuevaRecetaModule.imagenComida} />
                 </div>
-                {/*<div className={NuevaRecetaModule.divCaracteristicas}></div>*/}
                 <div className={NuevaRecetaModule.divTitle}>
                     <h3 className={NuevaRecetaModule.nombreComida}>{title(el.title)}</h3>
                 </div>
-                {/*<p dangerouslySetInnerHTML={{__html: verMas(el.summary)}}  />*/}
                 <div className={NuevaRecetaModule.divVerClose}>
                     <p onClick={openModal} className={NuevaRecetaModule.verMas}>Ver mas</p>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" onClick={()=> handleClick1(el)}  id={el} className={NuevaRecetaModule.imagen}>

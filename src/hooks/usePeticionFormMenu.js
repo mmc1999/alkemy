@@ -11,7 +11,7 @@ const apiKey7 = "ecab9e2bb8c0489d9d92f15c3d0f8412";*/
 const initialForm = {
     comida:""
 }
-let urlInicial = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey2}&query=pasta&addRecipeInformation=true&number=100`;
+let urlInicial = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&query=pasta&addRecipeInformation=true&number=100`;
 
 export const usePeticionFormMenu = () => {
     const [loading, setLoading] = useState(false);

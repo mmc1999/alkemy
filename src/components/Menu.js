@@ -49,9 +49,7 @@ export default function Menu() {
                     </div>
                     
                 </div>
-                <div>
-                    <Form  />
-                </div>
+                <Form  />
         </div>
         
     )

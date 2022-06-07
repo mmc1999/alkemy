@@ -8,9 +8,6 @@ export default function Home() {
     let {usuario} = useContext(UserContext);
     if(!usuario) return <Navigate to="/login" />
     
-    return(
-        <>
-            <Menu />
-        </>
-    )
+    return <Menu />
+    
 }

@@ -17,7 +17,6 @@ const MenuProvider = ({children}) => {
 
     const handleClick1 = (el) => {
         
-        
         let confirmar = window.confirm(`¿Seguro que desea agregar el plato ${el.title}?`);
         
         if(confirmar && menu.length+1 <= 4) {

@@ -24,7 +24,6 @@ export default function Form() {
     } = useApi(url)
     
     return(
-        <>
             <div>
                 <Formik
                     initialValues={{
@@ -55,7 +54,5 @@ export default function Form() {
                     {(props) => <BasicForm {...props} loading={loading} datos={datos} />}
                 </Formik>
             </div>
-            
-        </>
     )
 }

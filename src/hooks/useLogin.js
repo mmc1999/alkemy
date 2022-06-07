@@ -27,7 +27,7 @@ export const useLogin = (validationForm) => {
         setTimeout(() => {
             axios({
                 method: 'post',
-                //headers: { 'Content-Type': 'application/json'},
+                headers: { 'Content-Type': 'application/json'},
                 url: url,
                 data: body
             })
